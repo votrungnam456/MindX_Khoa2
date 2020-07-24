@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('share/header',{Headertitle:title})  %>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title> -->
+    <!-- <link rel="stylesheet" href="../public/stylesheets/signin.css"> -->
+    <link rel="stylesheet" href="/stylesheets/signin.css">
+    
+    <!-- <style>
+    *{
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    background-color: #dddddd;
+    min-height: 650px;
+    padding: 7.5px 15px;
+    background-image: url("../img/laptop.jpg");
+    background-repeat: no-repeat;
+    background-size:100%;
+
+}
+#btn-submit{
+    min-width: 350px;
+    margin-left:5%;
+    margin-top:5%;
+    min-height: 30px;
+}
+.form-group,#sign-up{
+    margin-left: 5%;
+    color:white;
+}
+.sign-up-btn{
+    margin-top:5%;
+    margin-left:10%;
+}
+.line{
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-right: 10%;
+    border-top:1px solid gray;
+}
+a{
+    list-style-type: none;
+}
+.login-form{
+    width: 50%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: black;
+    opacity: 0.75;
+    padding: 15px;
+    border: 2px dotted #cccccc;
+    border-radius: 10px;
+}
+input[type=text],input[type=password]{
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    min-width: 350px;
+    min-height: 30px;
+    border: 1px solid green;
+    opacity: 0.5;
+}
+#err{
+    display:none;
+    color: red;
+    margin-left:5%;
+    padding-top: 5%;
+    
+}
+input[type=text]:focus,input[type=password]:focus {
+    background-color: lightblue;
+}
+.container {
+    width: 780px;
+    max-width: 1200px;
+    margin: 80px auto;
+}
+h1{
+    text-align: center;
+    color:white;
+    margin-bottom: 5%;
+}
+
+    </style> -->
+</head>
+<body>
+    <main>
+            <div class="container">                   
+                <div class="login-form">
+                        <h1>Đăng nhập</h1>
+                    <div id="form-login" action="#" >
+                        <form action="/login/admin" method="POST">       
+                            <div class="form-group">
+                                <label for="user">Email:</label><br>
+                                <input type="text" name="username" id="txtUser" placeholder="example@abc.com" required><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Mật khẩu:</label><br>
+                                <input type="password" name="pwd" id="txtPwd"  placeholder=" Mật khẩu" required><br>   
+                            </div>
+                            <span id="err"></span>
+                            <div class="submit-g">
+                                    <input id="btn-submit" type="submit" value="Đăng nhập">
+                            </div>
+                        </form>
+                        <div class="line"></div>
+                        <div class="sign-up-btn">
+                            <p id="sign-up">Bạn chưa có tài khoản?|<a href="/login/signup" target="">Đăng ký</a> ngay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+</body>
+<!-- <script src="/javascripts/signin.js"></script> -->
+</html>

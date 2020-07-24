@@ -1,13 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
+const loginController = require('../controllers/loginController')
+
 router.get('/', function(req, res, next) {
-    res.send('My first API!!!');
+  res.send('My first API!!!');
   });
 router.get('/admin', function(req, res, next) {
-    res.render('login',{title:'Admin',listUser:['a','b','c']})
+    // loginController(req,res);
+    res.render('signin',{title:'Admin'})
   });
-router.get('/user', function(req, res, next) {
-res.render('login',{title:'User',listUser:['a','b','c']})
+router.post('/admin',function(req, res, next) {
+  loginController(req,res);
+  // console.log(req.body);
 });
+router.get('/signin', function(req, res, next) {
+res.render('signin',{title:'User'})
+});
+router.get('/signup', function(req, res, next) {
+  res.render('signup',{title:'User'})
+  });
 module.exports = router
