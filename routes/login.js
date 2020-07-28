@@ -12,6 +12,7 @@ router.get('/admin', function(req, res, next) {
   });
 router.post('/admin',function(req, res, next) {
   loginController(req,res);
+  
   // console.log(req.body);
 });
 router.get('/signin', function(req, res, next) {

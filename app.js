@@ -3,12 +3,28 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const firebase = require("firebase/app");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
-
 var app = express();
+
+var firebaseConfig = {
+  apiKey: "AIzaSyAOORPQ1lr7Q9CnCMStKrODZ67cKM-zJdg",
+  authDomain: "mindx-database.firebaseapp.com",
+  databaseURL: "https://mindx-database.firebaseio.com",
+  projectId: "mindx-database",
+  storageBucket: "mindx-database.appspot.com",
+  messagingSenderId: "19186086978",
+  appId: "1:19186086978:web:02d139c9e91788fc5aa9db",
+  measurementId: "G-ZW8WR4ZFYB"
+};
+// // Initialize Firebase
+// firebase.initializeApp(firebaseConfig);
+// // firebase.analytics();
+ 
+firebase.initializeApp(firebaseConfig);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
